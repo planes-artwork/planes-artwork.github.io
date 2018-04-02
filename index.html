@@ -1,0 +1,140 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PLANES</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:400,700" rel="stylesheet"> 
+    <link href="style/main.css" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+    <!-- draw within a grid -->
+    
+    <div id="screen1">
+        <h1 class="title"><i>PLANES</i></h1>
+        <div class="line"></div>
+        <div class="subtitle">
+            inter.being
+        </div>
+    </div>
+    
+    <div id="screen2">
+        <p>The slyly cognitive world pessimistic of organisms' correlation had no purpose in life. Intelligence veiled by abstract concepts accelerated human makers' delusions, and a nexus of peculiar life forms begun to emerge.</p>
+
+        <p>-PLANES- materialised with it. Infinite realms of *hybrids came to exist.</p>
+
+        <p>Worlds , concepts, abstractions - curiouser than life itself - formed into being~~~ born through understanding of what it is to be eternal.</p>
+    </div>
+    
+    <div id="screen3">
+        <div id="planes_header">
+            <h1>PLANES</h1>
+        </div>
+        
+        <ul>
+            <li><a href="play.html">Start interacting</a></li>
+            <li><a href="/about/">Read about PLANES</a></li>
+            <li><a href="https://github.com/">Contribute on github</a></li>
+        </ul>
+    </div>
+    
+    <!--
+    <h1>PLANES</h1>
+    <ul>
+        <li><a href="play.html">Start interacting</a></li>
+        <li><a href="about.html">Read about PLANES</a></li>
+        <li><a href="https://github.com/">Contribute on github</a></li>
+    </ul>
+    -->
+        
+    <!-- load scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script language="javascript" type="text/javascript" src="smoke.js"></script>
+    <script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js" integrity="sha256-Wp3wC/dKYQ/dCOUD7VUXXp4neLI5t0uUEF1pg0dFnAE=" crossorigin="anonymous"></script>
+
+    
+    
+    <script>
+        
+        
+        
+        $( document ).ready(function() {
+            // the document is ready to load
+            screen1();
+        });
+        
+        
+        function screen1()
+        {
+            $( ".line" ).animate({
+                opacity: 1.0
+            }, 5000, function() {
+                // Animation complete.
+                
+            });
+            
+            $( ".title" ).stop(true, true).delay(2000).animate({
+                opacity: 1.0
+            }, 5000, function() {
+                // Animation complete.
+            });
+
+            $( ".subtitle" ).stop(true, true).delay(3000).animate({
+                opacity: 1.0
+            }, 5000, function() {
+                // Animation complete.
+                
+                $( "#screen1" ).stop(true, true).delay(3000).animate({
+                    opacity: 0.0
+                }, 5000, function() {
+                    // Animation complete.
+                    screen2();
+                });
+            });
+        }
+        
+        
+        function screen2()
+        {
+            // center the text
+            $("#screen2").css("display", "block");
+            var boxHeight = $("#screen2").height();
+            var topPadding = innerHeight/2 - (boxHeight/2);
+            $("#screen2").css("marginTop", topPadding);
+            
+            // fade it in
+            $( "#screen2" ).stop(true, true).delay(500).animate({
+                opacity: 1.0
+            }, 5000, function() {
+                // Animation complete.
+                $( "#screen2" ).stop(true, true).delay(10000).animate({
+                    opacity: 0.0
+                }, 5000, function() {
+                    // Animation complete.
+                    $("#screen2").css("display", "none");
+                    screen3();
+                });
+            });
+        }
+        
+        
+        function screen3()
+        {
+            // center the text
+            $("#screen3").css("display", "block");
+            var boxHeight = $("#screen3").height();
+            var topPadding = innerHeight/2 - (boxHeight/2);
+            $("#screen3").css("marginTop", topPadding);
+            
+            $( "#screen3" ).stop(true, true).delay(500).animate({
+                opacity: 1.0
+            }, 5000, function() {
+                // Animation complete.
+                
+            });
+        }
+    
+    </script>
+    
+</body>
+</html>
