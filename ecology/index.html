@@ -6,6 +6,7 @@
         
             body {
                 background-color: black;
+                overflow: hidden;
             }
             
             iframe {
@@ -15,7 +16,7 @@
                 top: 0px;
                 left: 0px;
                 margin: 0px;
-                overflow: scroll;
+                overflow: hidden;
                 border: 0px;
                 display: none;
             }
@@ -84,10 +85,9 @@
             myIframe.addEventListener("load", function() {
                 // it's loaded -- hide everything else
                 document.getElementById('spinner').style.display = 'none';
-                document.getElementById('grid').style.display = 'none';
                 document.getElementById('mainFrame').style.display = 'block';
             });
-            myIframe.src = 'https://desolate-everglades-99772.herokuapp.com/';
+            myIframe.src = 'https://desolate-everglades-99772.herokuapp.com/?w='+innerWidth+'&h='+innerHeight;
             
         </script>
     </body>
