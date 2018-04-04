@@ -102,14 +102,14 @@ iframe {
 .title {
     font-family: 'Euphemia-UCAS', 'Open Sans', sans-serif;
     font-weight: normal;
-    letter-spacing: 50px;
+    letter-spacing: 40px;
     font-size: 20px;
     position: absolute;
-    width: 320px;
+    width: 270px;
     height: 30px;
     left: 50%;
     top: 50%;
-    margin-left: -160px;
+    margin-left: -135px;
     margin-top: -40px;
     z-index: 10;
     opacity: 0;
