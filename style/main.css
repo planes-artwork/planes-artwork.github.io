@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Euphemia-UCAS';
+    src:url('../fonts/Euphemia-UCAS.ttf.woff') format('woff'),
+        url('../fonts/Euphemia-UCAS.ttf.svg#Euphemia-UCAS') format('svg'),
+        url('../fonts/Euphemia-UCAS.ttf.eot'),
+        url('../fonts/Euphemia-UCAS.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
   background-color: black;
   color: white;
@@ -31,7 +42,7 @@ iframe {
 
 #screen2 {
     width: 90%;
-    max-width: 600px;
+    max-width: 295px;
     margin: auto;
     opacity: 0;
     display: none;
@@ -52,11 +63,12 @@ iframe {
 
 #screen3 ul li {
     text-align: center;
+    margin-bottom: 5px;
 }
 
 #container {
     width: 90%;
-    max-width: 900px;
+    max-width: 290px;
     margin: auto;
 }
 
@@ -65,40 +77,39 @@ iframe {
     max-width: 700px;
     margin: 0px auto 50px auto;
     text-align: center;
+    text-transform: uppercase;
 }
 
 #planes_header {
-    border-bottom: 3px solid white;
     height: 80px;
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 30px 0px;
 }
 
 #planes_header h1 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Euphemia-UCAS', 'Open Sans', sans-serif;
     font-weight: normal;
     text-align: center;
-    letter-spacing: 15px;
+    letter-spacing: 40px;
     padding: 0px;
-    text-shadow: 0px 0px 10px black;
     position: absolute;
-    width: 166px;
+    width: 260px;
     left: 50%;
-    margin-left: -83px;
+    margin-left: -130px;
     margin-top: 50px;
+    font-size: 18px;
 }
 
 .title {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Euphemia-UCAS', 'Open Sans', sans-serif;
     font-weight: normal;
-    letter-spacing: 15px;
-    font-size: 50px;
-    text-shadow: 0px 0px 10px black;
+    letter-spacing: 50px;
+    font-size: 20px;
     position: absolute;
-    width: 230px;
-    height: 80px;
+    width: 320px;
+    height: 30px;
     left: 50%;
     top: 50%;
-    margin-left: -115px;
+    margin-left: -160px;
     margin-top: -40px;
     z-index: 10;
     opacity: 0;
@@ -109,7 +120,7 @@ iframe {
     width: 100%;
     text-align: center;
     top: 50%;
-    margin-top: 50px;
+    margin-top: 25px;
     letter-spacing: 5px;
     opacity: 0;
 }
