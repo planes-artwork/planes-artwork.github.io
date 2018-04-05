@@ -55,20 +55,20 @@
         
         function screen1()
         {            
-            $( ".title" ).stop(true, true).animate({
+            $( ".title" ).animate({
                 opacity: 1.0
-            }, 5000, function() {
+            }, 2000, function() {
                 // Animation complete.
             });
 
-            $( ".subtitle" ).stop(true, true).delay(3000).animate({
+            $( ".subtitle" ).stop(true, true).delay(2000).animate({
                 opacity: 1.0
-            }, 5000, function() {
+            }, 2000, function() {
                 // Animation complete.
                 
-                $( "#screen1" ).stop(true, true).delay(3000).animate({
+                $( "#screen1" ).stop(true, true).delay(1000).animate({
                     opacity: 0.0
-                }, 5000, function() {
+                }, 2000, function() {
                     // Animation complete.
                     screen2();
                 });
@@ -87,15 +87,21 @@
             // fade it in
             $( "#screen2" ).stop(true, true).delay(500).animate({
                 opacity: 1.0
-            }, 5000, function() {
+            }, 3000, function() {
                 // Animation complete.
-                $( "#screen2" ).stop(true, true).delay(15000).animate({
-                    opacity: 0.0
-                }, 10000, function() {
-                    // Animation complete.
-                    $("#screen2").css("display", "none");
-                    screen3();
-                });
+                
+                setTimeout(fade2, 8000);
+            });
+        }
+        
+        function fade2()
+        {
+            $( "#screen2" ).animate({
+                opacity: 0.0
+            }, 3000, function() {
+                // Animation complete.
+                $("#screen2").css("display", "none");
+                screen3();
             });
         }
         
